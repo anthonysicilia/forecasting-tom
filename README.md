@@ -1,1 +1,6 @@
 # forecasting-tom
+This is the resource repository for the paper [Evaluating Theory of (an uncertain) Mind](https://aclanthology.org/2025.acl-long.395/) published at ACL 2025.
+
+Code is provided to re-create the benchmark experiments in the paper. You will need to provide your own tokens for any APIs you wish to use. Bash scripts are provided demonstrating dataset creation and model inference with self-explanatory names. CANDOR data needs to be requested from the initial corpus authors [here](https://betterup-data-requests.herokuapp.com) whereas all other datasets in the paper are already readily obtained via the [Convo Kit python package](https://convokit.cornell.edu).
+
+For evaluation, the python script ```src.tasks.tuq``` should be run as a module. Experimental arguments are described in the argument parser. The file is setup to output most of the metrics used in the paper already, but these can be pruned and customized as desired by changing the pandas groupby calls at the end. The final dataframe has more metrics than were discussed in the paper. Please, feel free to reach out or raise an issue with any questions!
